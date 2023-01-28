@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: aaaaaa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.OpenShopController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d4956" height="577.0" layoutX="13.0" layoutY="11.0" stroke="#eda567" strokeType="OUTSIDE" strokeWidth="3.0" width="916.0" />
+        <Label layoutX="351.0" layoutY="58.0" text="ชื่อร้านค้าของคุณ" textFill="WHITE">
+            <font>
+                <Font name="Garamond" size="36.0" />
+            </font>
+        </Label>
+        <TextField fx:id="userShopName" layoutX="395.0" layoutY="264.0" promptText="Enter Shop Name" />
+        <Button layoutX="545.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleSummitOpenShop" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: eda567; -fx-background-radius: 2em; -fx-cursor: hand;" text="ตกลง" />
+        <Button layoutX="305.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleCancelOpenShop" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: eda567; -fx-background-radius: 2em; -fx-cursor: hand;" text="ยกเลิก" />
+        <Label fx:id="warningDuplicateNameShop" layoutX="408.0" layoutY="308.0" text="ชื่อร้านนี้มีผู้ใช้แล้ว" textFill="RED">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="warningEnterNameShop" layoutX="421.0" layoutY="308.0" text="โปรดใส่ชื่อร้าน" textFill="RED">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+      <Label layoutX="440.0" layoutY="229.0" text="ใส่ชื่อร้าน" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

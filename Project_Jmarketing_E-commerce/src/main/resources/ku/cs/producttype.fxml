@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600" prefWidth="940.0" style="-fx-background-color: aaaaaa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.ProductTypeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d4956" height="577.0" layoutX="13.0" layoutY="13.0" stroke="#eda567" strokeType="OUTSIDE" strokeWidth="3.0" width="916.0" />
+      <Button layoutX="62.0" layoutY="523.0" mnemonicParsing="false" onAction="#handleAdminButton" prefHeight="31.0" prefWidth="56.0" style="-fx-cursor: hand; -fx-background-color: eda567; -fx-background-radius: 30;" text="กลับ">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <TextField fx:id="addProductTypeTextField" alignment="CENTER" layoutX="338.0" layoutY="39.0" prefHeight="31.0" prefWidth="338.0" promptText="product type">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="682.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleAddProductTypeButton" prefHeight="26.0" prefWidth="49.0" style="-fx-cursor: hand;" text="เพิ่ม">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label fx:id="productTypeLabel" layoutX="704.0" layoutY="97.0" prefHeight="30.0" prefWidth="198.0" text="type" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="item1Label" alignment="CENTER" layoutX="628.0" layoutY="243.0" prefHeight="27.0" prefWidth="127.0" text="item1" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="item2Label" alignment="CENTER" layoutX="628.0" layoutY="292.0" prefHeight="27.0" prefWidth="127.0" text="item2" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="item3Label" alignment="CENTER" layoutX="630.0" layoutY="336.0" prefHeight="27.0" prefWidth="127.0" text="item3" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="price1Label" layoutX="778.0" layoutY="243.0" text="price1" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="price2Label" layoutX="778.0" layoutY="292.0" text="price2" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="price3Label" layoutX="778.0" layoutY="336.0" text="price3" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="shop1Label" alignment="CENTER" layoutX="447.0" layoutY="243.0" prefHeight="27.0" prefWidth="150.0" text="shop1" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="shop2Label" alignment="CENTER" layoutX="447.0" layoutY="292.0" prefHeight="27.0" prefWidth="150.0" text="shop2" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="shop3Label" alignment="CENTER" layoutX="447.0" layoutY="336.0" prefHeight="27.0" prefWidth="150.0" text="shop3" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="item4Label" alignment="CENTER" layoutX="630.0" layoutY="382.0" prefHeight="27.0" prefWidth="127.0" text="item4" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="price4Label" layoutX="778.0" layoutY="382.0" text="price4" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="shop4Label" alignment="CENTER" layoutX="447.0" layoutY="382.0" prefHeight="27.0" prefWidth="150.0" text="shop4" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="backBtn" layoutX="757.0" layoutY="464.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: #515D6D; -fx-background-radius: 30; -fx-cursor: hand;" text="กลับ" textFill="WHITE" />
+      <Button fx:id="nextBtn" layoutX="827.0" layoutY="464.0" mnemonicParsing="false" onAction="#handleNextButton" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: eda567; -fx-background-radius: 30; -fx-cursor: hand;" text="ต่อไป" />
+      <TableView fx:id="productTypeTableView" layoutX="36.0" layoutY="89.0" prefHeight="412.0" prefWidth="400.0" />
+      <Button fx:id="addNewAttributeBtn" layoutX="741.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleAddNewAttributeButton" style="-fx-cursor: hand;" text="เพิ่ม" />
+      <TextField fx:id="addNewAttributeTextField" layoutX="569.0" layoutY="150.0" promptText="new attribute" />
+      <ChoiceBox fx:id="removeAttributeChoiceBox" layoutX="506.0" layoutY="467.0" prefWidth="150.0" />
+      <Button fx:id="removeBtn" layoutX="673.0" layoutY="467.0" mnemonicParsing="false" onAction="#handleRemoveAttributeBtn" prefHeight="26.0" prefWidth="38.0" style="-fx-cursor: hand;" text="ลบ" />
+      <Label layoutX="594.0" layoutY="97.0" text="ชนิดสินค้า : " textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="448.0" layoutY="199.0" prefHeight="30.0" prefWidth="150.0" text="ชื่อร้าน" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="630.0" layoutY="199.0" prefHeight="30.0" prefWidth="127.0" text="ชื่อสินค้า" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="776.0" layoutY="199.0" prefHeight="30.0" prefWidth="142.0" text="ราคาสินค้า" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="207.20001220703125" layoutX="711.0" layoutY="208.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+      <Line endX="-100.0" endY="207.20001220703125" layoutX="864.0" layoutY="207.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+   </children>
+</AnchorPane>

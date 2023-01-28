@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: aaaaaa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.StoreController">
+    <children>
+        <AnchorPane layoutX="563.0" layoutY="62.0" prefHeight="522.0" prefWidth="362.0" style="-fx-background-color: eda567; -fx-background-radius: 30;" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d4956" height="54.0" stroke="#eda567" strokeType="INSIDE" strokeWidth="3.0" width="932.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d4956" height="537.0" layoutY="51.0" stroke="#eda567" strokeType="INSIDE" strokeWidth="3.0" width="139.0" />
+        <Button alignment="CENTER_RIGHT" layoutX="389.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleSearchProductButton" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: eda567; -fx-background-radius: 30; -fx-cursor: hand;" text="ค้นหา" />
+        <Button alignment="CENTER" layoutX="463.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleClearSearchProductButton" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: eda567; -fx-background-radius: 30; -fx-cursor: hand;" text="ล้างการค้นหา" />
+        <AnchorPane layoutX="154.0" layoutY="135.0" prefHeight="429.0" prefWidth="394.0" style="-fx-background-color: eda567; -fx-background-radius: 30;">
+            <children>
+                <AnchorPane layoutX="5.0" layoutY="9.0" prefHeight="414.0" prefWidth="384.0" style="-fx-background-radius: 30; -fx-background-color: #3D4956;">
+                    <children>
+                        <Button layoutX="146.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleGoToCheckoutPageButton" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: eda567; -fx-background-radius: 30; -fx-cursor: hand;" text="ชำระเงิน" />
+                        <Label fx:id="warningNotHaveProductInCheckout" layoutX="249.0" layoutY="375.0" text="ไม่มีสินค้าซื้อ" textFill="RED">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <ListView fx:id="productListView" layoutY="43.0" prefHeight="317.0" prefWidth="384.0" />
+                        <MenuButton layoutX="288.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-cursor: hand;" text="เรียงตาม">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleSortLastedProductButton" text="สินค้าล่าสุด" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleSortExpensivePriceToLowButton" text="ราคา(มาก-&gt;น้อย)" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleSortLowPriceToExpensiveButton" text="ราคา(น้อย-&gt;มาก)" />
+                            </items>
+                        </MenuButton>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="569.0" layoutY="66.0" prefHeight="514.0" prefWidth="350.0" style="-fx-background-color: #3D4956; -fx-background-radius: 30;">
+            <children>
+                <Button fx:id="buyButton" layoutX="132.0" layoutY="467.0" mnemonicParsing="false" onAction="#handleBuyButton" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: eda567; -fx-background-radius: 30; -fx-cursor: hand;" text="ซื้อ" />
+                <ImageView fx:id="productImage" fitHeight="183.0" fitWidth="207.0" layoutX="78.0" layoutY="26.0" pickOnBounds="true" />
+                <Label fx:id="nameProductLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="217.0" prefHeight="35.0" prefWidth="225.0" text="nameproduct" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="attributeChoiceBox" layoutX="160.0" layoutY="358.0" prefHeight="26.0" prefWidth="114.0" style="-fx-cursor: hand;" />
+                <Label fx:id="topicAttributeLabel" layoutX="46.0" layoutY="360.0" text="ลักษณะสินค้า" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label fx:id="itemLabel" layoutX="735.0" layoutY="472.0" text="item" textFill="WHITE" />
+        <Button fx:id="minusButton" layoutX="649.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleDeleteItemButton" prefHeight="26.0" prefWidth="31.0" style="-fx-cursor: hand;" text="-" />
+        <Button fx:id="plusButton" layoutX="800.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleAddItemButton" prefHeight="26.0" prefWidth="31.0" style="-fx-cursor: hand;" text="+" />
+        <Label fx:id="nameShopLabel" layoutX="729.0" layoutY="329.0" onMouseClicked="#handleMouseClick" style="-fx-cursor: hand;" text="nameshop" textFill="WHITE" underline="true">
+            <font>
+                <Font size="15.0" />
+            </font></Label>
+        <Label fx:id="productOfNumberLabel" layoutX="729.0" layoutY="395.0" text="numberofproduct" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font></Label>
+        <Label fx:id="productPriceLabel" layoutX="730.0" layoutY="360.0" text="productprice" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font></Label>
+        <Label fx:id="topicNameShopLabel" layoutX="617.0" layoutY="329.0" text="ชื่อร้านค้า" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="topicProductPriceLabel" layoutX="616.0" layoutY="360.0" text="ราคาสินค้า" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="topicNumberOfProductLabel" layoutX="613.0" layoutY="395.0" text="จำนวนคงเหลือ" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="reportButton" layoutX="854.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleReportButton" style="-fx-background-color: eda567; -fx-background-radius: 30; -fx-cursor: hand;" text="รายงาน" />
+        <Label fx:id="warningItemMoreThanNumberOfProduct" layoutX="622.0" layoutY="501.0" text="จำนวนสินค้ามาก/น้อยกว่าจำนวนคงเหลือ" textFill="RED">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="warningNotHaveThisProduct" layoutX="846.0" layoutY="393.0" text="สินค้าหมด" textFill="RED">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="MinPrice" layoutX="7.0" layoutY="284.0" prefHeight="26.0" prefWidth="55.0" promptText="0" />
+        <TextField fx:id="MaxPrice" layoutX="76.0" layoutY="284.0" prefHeight="26.0" prefWidth="55.0" promptText="1000++" />
+        <Button layoutX="29.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleScopePriceRange" prefHeight="26.0" prefWidth="78.0" style="-fx-cursor: hand;" text="ค้นหา" />
+        <Label layoutX="26.0" layoutY="255.0" text="กำหนดช่วงราคา" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="warningPriceRangeLessThanZero" layoutX="13.0" layoutY="313.0" text="โปรดใส่ค่าที่ถูกต้อง" textFill="RED">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="66.0" layoutY="287.0" prefHeight="20.0" prefWidth="11.0" text="-" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="refreshSearch" layoutX="29.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="26.0" prefWidth="78.0" style="-fx-cursor: hand;" text="ลบการค้นหา" />
+        <ChoiceBox fx:id="productTypeChoiceBox" layoutX="11.0" layoutY="155.0" prefHeight="26.0" prefWidth="113.0" style="-fx-cursor: hand;" />
+        <TextField fx:id="searchProduct" layoutX="157.0" layoutY="78.0" prefHeight="35.0" prefWidth="258.0" promptText="ค้นหาชื่อสินค้า" style="-fx-background-radius: 30;" />
+        <Button layoutX="799.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleProfileButton" prefHeight="26.0" prefWidth="94.0" style="-fx-cursor: hand; -fx-background-color: eda567; -fx-background-radius: 2em;" text="โปรไฟล์" />
+        <Label layoutX="27.0" layoutY="128.0" text="หมวดหมู่สินค้า" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="warningThisProductHaveProductInUserProduct" layoutX="675.0" layoutY="501.0" text="สินค้าชนิดนี้เป็นของคุณ" textFill="RED">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

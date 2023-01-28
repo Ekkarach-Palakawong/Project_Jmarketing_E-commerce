@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="shopNameLabel" prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: aaaaaa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.UserManageController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d4956" height="577.0" layoutX="14.0" layoutY="13.0" stroke="#eda567" strokeType="OUTSIDE" strokeWidth="3.0" width="916.0" />
+    <Label layoutX="355.0" layoutY="35.0" text="ค้นหา" textFill="WHITE">
+      <font>
+        <Font size="18.0" />
+      </font></Label>
+    <TextField fx:id="userIDSearchTextField" layoutX="416.0" layoutY="36.0" prefHeight="26.0" prefWidth="137.0" promptText="User name here" />
+    <Button layoutX="564.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleSearchButton" text="ค้นหา" />
+    <Button layoutX="48.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleAdminButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: eda567; -fx-background-radius: 2em; -fx-cursor: hand;" text="กลับ" />
+    <Line endX="709.0000610351562" endY="1.52587890625E-5" layoutX="207.0" layoutY="110.0" startX="-176.59999084472656" startY="1.52587890625E-5" stroke="WHITE" />
+    <Button fx:id="nextButton" layoutX="544.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleNextButton" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: eda567; -fx-background-radius: 30;" text="ต่อไป" />
+    <Button fx:id="backButton" layoutX="452.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #666666; -fx-background-radius: 30;" text="กลับ" textFill="WHITE" />
+    <Label fx:id="userNameLabel" layoutX="553.0" layoutY="144.0" prefHeight="27.0" prefWidth="186.0" text="username" textFill="WHITE">
+      <font>
+        <Font size="18.0" />
+      </font></Label>
+    <Label fx:id="totalPayLabel1" layoutX="437.0" layoutY="180.0" text="totalpay" textFill="WHITE">
+      <font>
+        <Font size="18.0" />
+      </font></Label>
+    <Label fx:id="totalPayLabel2" layoutX="555.0" layoutY="178.0" prefHeight="27.0" prefWidth="174.0" text="totalpay" textFill="WHITE">
+      <font>
+        <Font size="18.0" />
+      </font></Label>
+    <Label fx:id="shopLabel" layoutX="555.0" layoutY="216.0" prefHeight="27.0" prefWidth="258.0" text="shopname" textFill="WHITE">
+      <font>
+        <Font size="18.0" />
+      </font></Label>
+    <Label fx:id="itemLabel1" layoutX="429.0" layoutY="267.0" prefHeight="26.0" prefWidth="122.0" text="item1" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Label fx:id="priceLabel1" layoutX="564.0" layoutY="267.0" prefHeight="26.0" prefWidth="106.0" text="price1" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Label fx:id="itemLabel2" layoutX="432.0" layoutY="301.0" prefHeight="26.0" prefWidth="122.0" text="item2" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Label fx:id="itemLabel3" layoutX="434.0" layoutY="339.0" prefHeight="26.0" prefWidth="122.0" text="item3" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Label fx:id="itemLabel4" contentDisplay="CENTER" layoutX="432.0" layoutY="377.0" prefHeight="26.0" prefWidth="122.0" text="item4" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Label fx:id="priceLabel2" layoutX="564.0" layoutY="302.0" prefHeight="26.0" prefWidth="106.0" text="price2" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Label fx:id="priceLabel3" layoutX="564.0" layoutY="339.0" prefHeight="26.0" prefWidth="106.0" text="price3" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Label fx:id="priceLabel4" layoutX="564.0" layoutY="377.0" prefHeight="26.0" prefWidth="106.0" text="price4" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font size="16.0" />
+      </font></Label>
+    <Button fx:id="disableButton" layoutX="787.0" layoutY="116.0" mnemonicParsing="false" onAction="#handleDisableButton" prefHeight="26.0" prefWidth="98.0" text="ระงับการใช้งาน" />
+    <Button fx:id="reactivateButton" layoutX="700.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleReactivateButton" text="ปลดการระงับ" />
+    <Button layoutX="763.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleReportedUser" prefHeight="26.0" prefWidth="122.0" text="รายละเอียดการรายงาน" />
+    <Label fx:id="userWarningLabel" layoutX="416.0" layoutY="71.0" text="ไม่เจอผู้ใช้งาน" textFill="RED">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebf1f7" height="171.0" layoutX="702.0" layoutY="253.0" stroke="BLACK" strokeType="INSIDE" width="210.0" />
+    <ImageView fx:id="userImage" fitHeight="150.0" fitWidth="194.0" layoutX="710.0" layoutY="264.0" pickOnBounds="true" />
+    <TableView fx:id="userListTable" layoutX="53.0" layoutY="129.0" prefHeight="370.0" prefWidth="355.0" />
+    <Label fx:id="shopName1Label" layoutX="436.0" layoutY="218.0" text="shopname : " textFill="WHITE">
+      <font>
+        <Font size="18.0" />
+      </font></Label>
+    <Label layoutX="435.0" layoutY="146.0" text="ชื่อ user :" textFill="WHITE">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <Line endX="32.60002136230469" endY="1.52587890625E-5" layoutX="605.0" layoutY="257.0" startX="-176.59999084472656" startY="1.52587890625E-5" stroke="WHITE" />
+  </children>
+</AnchorPane>

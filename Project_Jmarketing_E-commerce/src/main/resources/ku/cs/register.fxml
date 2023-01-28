@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: aaaaaa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.RegisterController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d4956" height="577.0" layoutX="12.0" layoutY="12.0" stroke="#eda567" strokeType="OUTSIDE" strokeWidth="3.0" width="916.0" />
+      <Button layoutX="61.0" layoutY="521.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #eda567; -fx-cursor: hand; -fx-background-radius: 5em;" text="กลับ" />
+      <Label layoutX="415.0" layoutY="65.0" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Garamond" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="619.0" layoutY="196.0" text="ชื่อผู้ใช้ระบบ" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="619.0" layoutY="263.0" text="รหัสผ่าน" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="userNameTxt" layoutX="619.0" layoutY="226.0" promptText="Create user name" />
+      <TextField fx:id="createPassword" layoutX="619.0" layoutY="293.0" promptText="Create password" />
+      <Button layoutX="618.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #eda567; -fx-background-radius: 5em; -fx-cursor: hand;" text="ยืนยัน" />
+      <TextField fx:id="nameSignature" layoutX="199.0" layoutY="226.0" promptText="Enter your name" />
+      <Label layoutX="201.0" layoutY="196.0" text="ชื่อ" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="619.0" layoutY="329.0" text="ยืนยันระบบผ่าน" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="createPasswordAgain" layoutX="619.0" layoutY="358.0" promptText="Enter password again" />
+      <Label fx:id="nullError" layoutX="644.0" layoutY="402.0" text="ad3" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="userNameError" layoutX="779.0" layoutY="223.0" text="ad1" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="passError" layoutX="779.0" layoutY="355.0" text="as2" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button fx:id="browseButton" layoutX="214.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleBrowseButton" text="Browse Your Image" />
+   </children>
+</AnchorPane>

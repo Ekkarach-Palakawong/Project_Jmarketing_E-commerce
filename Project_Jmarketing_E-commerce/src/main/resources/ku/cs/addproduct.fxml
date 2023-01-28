@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="warningNameLabel" prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: aaaaaa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.AddProductController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3d4956" height="577.0" layoutX="13.0" layoutY="11.0" stroke="#eda567" strokeType="OUTSIDE" strokeWidth="3.0" width="916.0" />
+      <Label layoutX="361.0" layoutY="32.0" text="เปิดร้านของท่าน" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="123.0" text="ชื่อสินค้า :" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="userProductName" layoutX="156.0" layoutY="126.0" prefHeight="25.0" prefWidth="155.0" promptText="Enter Product Name" />
+      <Label layoutX="37.0" layoutY="339.0" text="จำนวนสินค้า :" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="userNumberOfProduct" layoutX="155.0" layoutY="342.0" prefHeight="25.0" prefWidth="155.0" promptText="Enter Number of Products" />
+      <Label layoutX="561.0" layoutY="130.0" text="ใส่รูปสินค้าของท่าน(ขั้นต่ำ1รูป)" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button layoutX="42.0" layoutY="503.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: eda567; -fx-background-radius: 5em; -fx-cursor: hand;" text="กลับ" />
+      <Button layoutX="801.0" layoutY="503.0" mnemonicParsing="false" onAction="#handleSubmitButton" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: eda567; -fx-cursor: hand; -fx-background-radius: 5em;" text="ยืนยัน" />
+      <Label layoutX="52.0" layoutY="284.0" text="ราคาสินค้า :" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="userProductPrice" layoutX="155.0" layoutY="287.0" prefHeight="26.0" prefWidth="155.0" promptText="Enter Product Price" />
+      <Label fx:id="warningNameProductLabel" layoutX="335.0" layoutY="123.0" text="โปรดใส่ชื่อสินค้า" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="warningProductPriceLabel" layoutX="332.0" layoutY="286.0" text="โปรดใส่ราคาสินค้า" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="warningNumberOfProductLabel" layoutX="332.0" layoutY="341.0" text="โปรดใส่จำนวนสินค้า" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ChoiceBox fx:id="typeChoiceBox" layoutX="156.0" layoutY="176.0" prefHeight="26.0" prefWidth="155.0" />
+      <ChoiceBox fx:id="attributeChoiceBox" layoutX="156.0" layoutY="232.0" prefHeight="26.0" prefWidth="155.0" />
+      <Label layoutX="37.0" layoutY="389.0" text="ต้องการให้แจ้งเตือนเมื่อว่าสินค้าน้อยกว่า :" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="userWarningNumberOfProduct" layoutX="154.0" layoutY="423.0" promptText="Enter Number" />
+      <Label fx:id="warningLowProductLabel" layoutX="336.0" layoutY="420.0" text="โปรดใส่จำนวน" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button layoutX="641.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleBrowseButton" text="เลือกรูปภาพ" />
+      <ImageView fx:id="productImage" fitHeight="183.0" fitWidth="207.0" layoutX="570.0" layoutY="176.0" pickOnBounds="true" />
+      <Label fx:id="warningUserHaveProduct" layoutX="355.0" layoutY="123.0" text="คุณขายสินค้านี้แล้ว" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="40.0" layoutY="173.0" text="ประเภทสินค้า :" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="229.0" text="ชนิดสินค้า :" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
